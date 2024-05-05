@@ -1,0 +1,271 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    text-align: center;
+    background-color: beige;
+    padding: 0px;
+}
+header p{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    margin: 0%;
+    background-color: beige;
+}
+
+.navbar{
+    background-color: bisque;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    line-height: 20px;
+
+}
+.navbar a{
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+}
+
+.navbar li{
+    display: inline;
+    position: relative;
+}
+
+.navbar a:hover{
+    background-color: burlywood;
+    cursor: pointer;
+}
+aside{
+    width: 20%;
+    float: left;
+    padding: 10px;
+}
+
+section {
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+
+article{
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+
+footer{
+    display: block;
+    clear: both;
+    background-color: blanchedalmond;
+    text-align: center;
+    padding: 25px;
+}
+
+@media screen and (max-width: 600px){
+    aside, section, article{
+        width: 100%;
+    }
+}
+
+.gallery{
+    display: inline-block;
+    border: 1px solid navajowhite;
+    margin: 5px;
+    background-color: rgb(246, 242, 207);
+    width: 200px;
+}
+
+.gallery .description{
+    padding: 10px;
+    text-align: center;
+}
+
+.gallery:hover{
+    border: 1px solid rgb(245, 206, 149);
+}
+
+.gallery img{
+    width: 100%;
+    height: auto;
+}
+
+.icon{
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+}   
+
+.icon a{
+    text-decoration: none;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.fa-brands.fa-linkedin.fa-2x{
+    color:rgb(134, 183, 232);
+}
+
+.fa-brands.fa-linkedin.fa-2x:hover{
+    color:rgb(75, 148, 221);
+}
+
+.fa-brands.fa-github.fa-2x{
+    color:rgb(62, 60, 59);
+}
+
+.fa-brands.fa-github.fa-2x:hover{
+    color:rgb(13, 9, 4);
+}
+
+
+.container1{
+    display: flex;
+    border: 5px solid black;
+    height: 90vh;
+}
+
+.container2{
+    border: 5px solid black;
+}
+
+.container3{
+    border: 5px solid black;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    font-size: 8em;
+    text-align: center;
+    border-radius: 15px;
+}
+
+
+#box1{
+    background-color: yellow;
+    align-self: flex-start;
+}
+
+#box2{
+    background-color: blue;
+}
+
+#box3{
+    background-color: green;
+}
+
+#box4{
+    background-color: red;
+}
+
+.transbox{
+    width: 250px;
+    height: 250px;
+    border: 5px solid;
+    padding: 5px;
+    font-size: 13em;
+    text-align: center;
+    
+    transform: translateX(100px) rotateZ(45deg) scale(0.5);
+}
+#box5{
+    background-color: khaki;
+}
+#box6{
+    background-color: navajowhite;
+}
+
+#box7{
+    background-color: palegoldenrod;
+}
+
+#box8{
+    width: 250px;
+    height: 250px;
+    font-size: 13em;
+    text-align: center;
+    background-color: wheat;
+
+    animation-name: slideLeft;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes slideLeft {
+    from{transform: translateX(300%);}
+}
+
+@keyframes slideRight {
+    to{transform: translateX(300%);}
+}
+
+@keyframes slideUp {
+    from{transform: translateY(300%);} 
+}
+
+@keyframes slideDown {
+    to{transform: translateY(300%);}
+}
+
+@keyframes rotate {
+    100%{transform: rotateX(360deg);}
+}
+
+@keyframes grow {
+    50%{transform: scale(2, 2);}
+}
+
+@keyframes shrink {
+    50%{transform: scale(0.5, 0.5);}
+}
+
+@keyframes fade {
+    50%{opacity: 0;}
+}
+
+@keyframes colorChange {
+    0%{background-color: gold;}
+    20%{background-color: goldenrod;}
+    40%{background-color: orange;}
+    60%{background-color: green;}
+    80%{background-color: blue;}
+    100%{background-color: red;}
+}
+
+@keyframes glow {
+    50%{box-shadow: 0px 0px 50px black}
+}
+
+.container4{
+    display: flex;
+    height: 100px
+}
+
+a button{
+    font-size: 25px;
+    border-radius: 15px;
+    background-color: blanchedalmond;
+    cursor: pointer;
+}
+
+a button:hover{
+    background-color: rgb(228, 198, 153);
+}
