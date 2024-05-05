@@ -13,6 +13,10 @@ header p{
 }
 
 body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 0%;
     background-color: beige;
 }
@@ -74,6 +78,7 @@ footer{
     background-color: blanchedalmond;
     text-align: center;
     padding: 25px;
+    margin-top: auto;
 }
 
 @media screen and (max-width: 600px){
