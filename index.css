@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    background-color: beige;
+    padding: 0px;
+}
+
+header p {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0%;
+    background-color: beige;
+}
+
+#navbar {
+    background-color: bisque;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    background-color: bisque;
+    z-index: 1000;
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    line-height: 20px;
+
+}
+
+#navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+}
+
+#navbar li {
+    display: inline;
+    position: relative;
+}
+
+#navbar a:hover {
+    background-color: burlywood;
+    cursor: pointer;
+}
+
+aside {
+    width: 20%;
+    float: left;
+    padding: 10px;
+}
+
+section {
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+
+article {
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+
+footer {
+    display: block;
+    clear: both;
+    background-color: blanchedalmond;
+    text-align: center;
+    padding: 25px;
+    margin-top: auto;
+}
+
+@media screen and (max-width: 600px) {
+    aside, section, article {
+        width: 100%;
+    }
+}
+
+.gallery {
+    display: inline-block;
+    border: 1px solid navajowhite;
+    margin: 5px;
+    background-color: rgb(246, 242, 207);
+    width: 200px;
+}
+
+.gallery .description {
+    padding: 10px;
+    text-align: center;
+}
+
+.gallery:hover {
+    border: 1px solid rgb(245, 206, 149);
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.icon {
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+}
+
+.icon a {
+    text-decoration: none;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.fa-brands.fa-linkedin.fa-2x {
+    color: rgb(134, 183, 232);
+}
+
+.fa-brands.fa-linkedin.fa-2x:hover {
+    color: rgb(75, 148, 221);
+}
+
+.fa-brands.fa-github.fa-2x {
+    color: rgb(62, 60, 59);
+}
+
+.fa-brands.fa-github.fa-2x:hover {
+    color: rgb(13, 9, 4);
+}
+
+.fade-in {
+    opacity: 0;
+    /* Start with opacity 0 */
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* Define the fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* Start with opacity 0 */
+    }
+
+    to {
+        opacity: 1;
+        /* End with opacity 1 */
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky+.content {
+    padding-top: 60px;
+}
