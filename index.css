@@ -22,12 +22,6 @@ body {
     background-color: beige;
 }
 
-aside {
-    width: 20%;
-    float: left;
-    padding: 10px;
-}
-
 section {
     width: 40%;
     float: left;
@@ -127,19 +121,6 @@ footer {
     }
 }
 
-/* .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.content {
-    padding: 16px;
-}
-
-.sticky+.content {
-    padding-top: 60px;
-} */
 
 .navbar {
     width: 100%;
@@ -269,4 +250,14 @@ footer {
 
 .nav-container input[type="checkbox"]:checked~.logo {
     display: none;
-} 
+}
+
+.cursor {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 0.6em;
+    height: 1em;
+    color: black;
+    background-color: #fff;
+    animation: blink 1s;
+}
