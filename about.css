@@ -22,18 +22,6 @@ body {
     background-color: beige;
 }
 
-section {
-    width: 40%;
-    float: left;
-    padding: 10px;
-}
-
-article {
-    width: 40%;
-    float: left;
-    padding: 10px;
-}
-
 footer {
     width: 100%;
     background-color: #967259;
@@ -97,23 +85,99 @@ footer {
     color: rgb(13, 9, 4);
 }
 
-.fade-in {
-    opacity: 0;
-    /* Start with opacity 0 */
-    animation: fadeIn 2s ease-in-out forwards;
+
+
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(300%);
+    }
 }
 
-/* Define the fadeIn animation */
-@keyframes fadeIn {
+@keyframes slideRight {
+    to {
+        transform: translateX(300%);
+    }
+}
+
+@keyframes slideUp {
     from {
+        transform: translateY(300%);
+    }
+}
+
+@keyframes slideDown {
+    to {
+        transform: translateY(300%);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+@keyframes grow {
+    50% {
+        transform: scale(2, 2);
+    }
+}
+
+@keyframes shrink {
+    50% {
+        transform: scale(0.5, 0.5);
+    }
+}
+
+@keyframes fade {
+    50% {
         opacity: 0;
-        /* Start with opacity 0 */
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: gold;
     }
 
-    to {
-        opacity: 1;
-        /* End with opacity 1 */
+    20% {
+        background-color: goldenrod;
     }
+
+    40% {
+        background-color: orange;
+    }
+
+    60% {
+        background-color: green;
+    }
+
+    80% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: red;
+    }
+}
+
+@keyframes glow {
+    50% {
+        box-shadow: 0px 0px 50px black
+    }
+}
+
+
+a button {
+    font-size: 25px;
+    border-radius: 15px;
+    background-color: blanchedalmond;
+    cursor: pointer;
+}
+
+a button:hover {
+    background-color: rgb(228, 198, 153);
 }
 
 
@@ -245,14 +309,4 @@ footer {
 
 .nav-container input[type="checkbox"]:checked~.logo {
     display: none;
-}
-
-.cursor {
-    display: inline-block;
-    vertical-align: bottom;
-    width: 0.6em;
-    height: 1em;
-    color: black;
-    background-color: #fff;
-    animation: blink 1s;
 }

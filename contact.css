@@ -1,17 +1,9 @@
-* {
-    box-sizing: border-box;
-}
-
 header {
     text-align: center;
     background-color: beige;
     padding: 0px;
 }
 
-header p {
-    margin: 0px;
-    padding: 0px;
-}
 
 body {
     min-height: 100vh;
@@ -20,18 +12,6 @@ body {
     justify-content: space-between;
     margin: 0%;
     background-color: beige;
-}
-
-section {
-    width: 40%;
-    float: left;
-    padding: 10px;
-}
-
-article {
-    width: 40%;
-    float: left;
-    padding: 10px;
 }
 
 footer {
@@ -47,27 +27,6 @@ footer {
     }
 }
 
-.gallery {
-    display: inline-block;
-    border: 1px solid navajowhite;
-    margin: 5px;
-    background-color: rgb(246, 242, 207);
-    width: 200px;
-}
-
-.gallery .description {
-    padding: 10px;
-    text-align: center;
-}
-
-.gallery:hover {
-    border: 1px solid rgb(245, 206, 149);
-}
-
-.gallery img {
-    width: 100%;
-    height: auto;
-}
 
 .icon {
     text-align: center;
@@ -97,23 +56,15 @@ footer {
     color: rgb(13, 9, 4);
 }
 
-.fade-in {
-    opacity: 0;
-    /* Start with opacity 0 */
-    animation: fadeIn 2s ease-in-out forwards;
+a button {
+    font-size: 25px;
+    border-radius: 15px;
+    background-color: blanchedalmond;
+    cursor: pointer;
 }
 
-/* Define the fadeIn animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        /* Start with opacity 0 */
-    }
-
-    to {
-        opacity: 1;
-        /* End with opacity 1 */
-    }
+a button:hover {
+    background-color: rgb(228, 198, 153);
 }
 
 
@@ -245,14 +196,4 @@ footer {
 
 .nav-container input[type="checkbox"]:checked~.logo {
     display: none;
-}
-
-.cursor {
-    display: inline-block;
-    vertical-align: bottom;
-    width: 0.6em;
-    height: 1em;
-    color: black;
-    background-color: #fff;
-    animation: blink 1s;
 }

@@ -72,13 +72,11 @@ article{
     padding: 10px;
 }
 
-footer{
-    display: block;
-    clear: both;
-    background-color: blanchedalmond;
+footer {
+    width: 100%;
+    background-color: #967259;
     text-align: center;
-    padding: 25px;
-    margin-top: auto;
+    height: 5em;
 }
 
 @media screen and (max-width: 600px){
