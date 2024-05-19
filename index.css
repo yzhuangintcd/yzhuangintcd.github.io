@@ -223,7 +223,7 @@ Hero Section
 .main__container h1 {
     font-size: 4rem;
     background-color: black;
-    background-image: linear-gradient(to top, black 0%, #dfb378 100%);
+    background-image: linear-gradient(to top, rgb(0, 0, 0) 0%, #000000 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -297,6 +297,55 @@ Hero Section
     height: 80%;
     width: 80%;
 }
+
+/* Additional styles for emoji animation */
+#emoji-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    pointer-events: none;
+    /* Ensure container does not block other elements */
+}
+
+.emoji {
+    font-size: 2rem;
+    margin: 5px;
+    position: absolute;
+    bottom: 0;
+    animation: rise 5s ease-in-out forwards, wave 1s infinite;
+}
+
+/* Keyframes for waving animation */
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(20deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rise {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100px); }
+}
+
 
 /* Mobile Response */
 
@@ -606,4 +655,60 @@ Hero Section
         width: 100%;
     }
 
+}
+
+
+#emoji-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    pointer-events: none;
+    /* Ensure container does not block other elements */
+}
+
+.emoji {
+    font-size: 2rem;
+    margin: 5px;
+    position: absolute;
+    bottom: 0;
+    animation: rise 5s ease-in-out forwards, wave 1s infinite;
+}
+
+/* Keyframes for waving animation */
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(20deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rise {
+    0% {
+        bottom: 0;
+    }
+
+    /* Start from the bottom of the screen */
+    100% {
+        bottom: 300%;
+    }
+
+    /* Move to the top of the screen */
 }

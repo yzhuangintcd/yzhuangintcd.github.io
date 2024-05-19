@@ -57,3 +57,71 @@ menu.addEventListener("click", function () {
 });
 
 typingAnimation("typing-animation");
+
+
+
+// test.js
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.querySelector('.main__btn');
+    const emojiContainer = document.getElementById('emoji-container');
+
+    button.addEventListener('click', () => {
+        riseContainer();
+    });
+
+    function riseContainer() {
+        // Clear any existing emojis and animation
+        emojiContainer.innerHTML = '';
+        emojiContainer.style.animation = 'none';
+
+        // Calculate the number of emojis based on the screen width
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+        const emojiWidth = 50; // Width of each emoji (adjust based on your preference)
+        const emojiHeight = 50; // Height of each emoji (adjust based on your preference)
+        const numEmojis = Math.ceil(screenWidth / emojiWidth);
+
+        // Create and append the specified number of emojis with random positions within the screen width and height
+        for (let i = 0; i < numEmojis; i++) {
+            const emoji = document.createElement('span');
+            emoji.textContent = '👋';
+            emoji.classList.add('emoji');
+
+            // Calculate random horizontal and vertical positions
+            let randomHorizontalPosition = Math.random() * (screenWidth - emojiWidth);
+            let randomVerticalPosition = Math.random() * (screenHeight - emojiHeight);
+
+            // Ensure emojis do not overlap
+            randomHorizontalPosition = avoidOverlap(randomHorizontalPosition, emojiWidth, emojiContainer);
+            randomVerticalPosition = avoidOverlap(randomVerticalPosition, emojiHeight, emojiContainer);
+
+            // Set the position of the emoji
+            emoji.style.left = `${randomHorizontalPosition}px`;
+            emoji.style.top = `${randomVerticalPosition}px`;
+
+            emojiContainer.appendChild(emoji);
+        }
+
+        // Trigger the rise animation
+        // We use a setTimeout to re-enable the animation after a very short delay
+        setTimeout(() => {
+            emojiContainer.style.animation = 'rise 12s ease forwards';
+        }, 10);
+    }
+
+    // Function to avoid overlap of emojis
+    function avoidOverlap(position, size, container) {
+        const minDistance = size * 1.5; // Minimum distance between emojis
+        const emojis = container.querySelectorAll('.emoji');
+        let newPosition = position;
+
+        emojis.forEach(emoji => {
+            const emojiPosition = parseInt(emoji.style.left, 10);
+            if (Math.abs(emojiPosition - position) < minDistance) {
+                newPosition = emojiPosition + minDistance;
+            }
+        });
+
+        return newPosition;
+    }
+});
