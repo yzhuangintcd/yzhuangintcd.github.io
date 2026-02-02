@@ -319,6 +319,11 @@ Hero Section
 }
 
 /* Footer */
+
+.logo {
+    margin-right: 10px;
+}
+
 .footer__container {
     background-color: #deb887;
     padding: 5rem 0;
