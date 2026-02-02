@@ -615,8 +615,8 @@ Hero Section
 
     .golden_theo {
         position: relative;
-        top: -150px;
-        left: -155px;
+        top: -50px;
+        left: -175px;
         animation: tail_wag 1s infinite;
         -webkit-animation: tail_wag 1s infinite;
         -moz-animation: tail_wag 1s infinite;
