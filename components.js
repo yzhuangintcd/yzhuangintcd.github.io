@@ -5,7 +5,7 @@
 
 // ========== NAVBAR ==========
 
-document.getElementById('navbar-placeholder').innerHTML = `
+document.getElementById("navbar-placeholder").innerHTML = `
     <nav class="navbar">
         <div class="navbar__container">
             <a href="index.html" id="navbar__logo">
@@ -33,7 +33,7 @@ document.getElementById('navbar-placeholder').innerHTML = `
 
 // ========== FOOTER ==========
 
-document.getElementById('footer-placeholder').innerHTML = `
+document.getElementById("footer-placeholder").innerHTML = `
     <div class="footer__container">
         <div class="footer__links">
             <div class="footer__link--wrapper">
@@ -93,10 +93,10 @@ document.getElementById('footer-placeholder').innerHTML = `
 
 // ========== MOBILE NAV TOGGLE ==========
 
-const menu = document.querySelector('#mobile-menu');
-const menuLink = document.querySelector('.navbar__menu');
+const menu = document.querySelector("#mobile-menu");
+const menuLink = document.querySelector(".navbar__menu");
 
-menu.addEventListener('click', function () {
-    menu.classList.toggle('is-active');
-    menuLink.classList.toggle('active');
+menu.addEventListener("click", function () {
+  menu.classList.toggle("is-active");
+  menuLink.classList.toggle("active");
 });

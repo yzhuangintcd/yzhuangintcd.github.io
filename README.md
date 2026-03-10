@@ -43,12 +43,12 @@ Personal portfolio website for Yuchen Zhuang — a CS student at Trinity College
 
 ## Pages
 
-| Page | Description |
-|------|-------------|
-| **Home** (`index.html`) | Landing page with typing animation, golden_theo pixel-art dog, and experience highlights |
-| **About** (`about.html`) | Bio, academic background, and work experience overview |
-| **Projects** (`projects.html`) | Showcase of personal and university projects |
-| **Contact** (`contact.html`) | Links to email and LinkedIn |
+| Page                           | Description                                                                              |
+| ------------------------------ | ---------------------------------------------------------------------------------------- |
+| **Home** (`index.html`)        | Landing page with typing animation, golden_theo pixel-art dog, and experience highlights |
+| **About** (`about.html`)       | Bio, academic background, and work experience overview                                   |
+| **Projects** (`projects.html`) | Showcase of personal and university projects                                             |
+| **Contact** (`contact.html`)   | Links to email and LinkedIn                                                              |
 
 ---
 
@@ -57,6 +57,7 @@ Personal portfolio website for Yuchen Zhuang — a CS student at Trinity College
 Shared HTML (navbar + footer) is injected at runtime by `components.js`, which is loaded on every page. This replaces the previous copy-paste approach where nav and footer HTML were duplicated across all four pages.
 
 Each page loads CSS in this order:
+
 1. `global.css` — reset, navbar, hero base, services base, footer
 2. `[page].css` — page-specific overrides and unique components
 
