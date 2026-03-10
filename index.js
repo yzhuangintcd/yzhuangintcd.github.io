@@ -48,13 +48,7 @@ function updateText(id) {
   }
 }
 
-const menu = document.querySelector("#mobile-menu");
-const menuLink = document.querySelector(".navbar__menu");
-
-menu.addEventListener("click", function () {
-  menu.classList.toggle("is-active");
-  menuLink.classList.toggle("active");
-});
+// Mobile nav toggle is handled by components.js
 
 typingAnimation("typing-animation");
 
