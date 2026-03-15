@@ -53,7 +53,7 @@ function updateText(id) {
 typingAnimation("typing-animation");
 
 document.addEventListener("DOMContentLoaded", () => {
-  const button = document.querySelector(".main__btn");
+  const button = document.querySelector("#theoBtn");
   const theo = document.querySelector(".golden_theo");
 
   button.addEventListener("click", () => {

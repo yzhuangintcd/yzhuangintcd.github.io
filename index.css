@@ -47,13 +47,14 @@
     position: relative;
     transition: all 0.35s;
     outline: none;
+    z-index: 2;
+    overflow: hidden;
 }
 
-.main__btn a {
+.main__btn-text {
     position: relative;
     z-index: 2;
-    color: #fff;
-    text-decoration: none;
+    color: inherit;
 }
 
 .main__btn:after {
@@ -66,10 +67,11 @@
     background: black;
     transition: all 0.35s;
     border-radius: 4px;
+    z-index: 1;
 }
 
 .main__btn:hover {
-    color: #d6b575;
+    color: #fff;
 }
 
 .main__btn:hover:after {
