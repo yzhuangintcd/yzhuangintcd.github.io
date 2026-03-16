@@ -56,9 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const button = document.querySelector("#theoBtn");
   const theo = document.querySelector(".golden_theo");
 
+  if (!button || !theo) {
+    return;
+  }
+
   button.addEventListener("click", () => {
-    if (theo) {
-      theo.classList.add("tail_wag_active");
-    }
+    theo.classList.toggle("tail_wag_active");
   });
 });
